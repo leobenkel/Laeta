@@ -30,12 +30,16 @@ Small library to handle registery of services.
 
 ## Table of Contents
 
-```
-// TODO
-```
+* [How to use?](#how-to-use)
+  * [Add to build.sbt](#add-to-buildsbt)
+  * [Setup](#setup)
+  * [To use](#to-use)
+
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
-### Include dependencies
+## How to use?
+
+### Add to build.sbt
 
 First include the library in your project:
 
@@ -43,3 +47,64 @@ First include the library in your project:
 libraryDependencies += "com.leobenkel" %% "laeta" % "[VERSION]"
 ```
 With version being: [![maven-central-badge][]][maven-search]
+
+### Setup
+
+Take a look at the [test example](https://github.com/leobenkel/Laeta/blob/master/Library/src/test/scala/foo/bar/consumer/ServiceTest.scala)
+
+You need two pieces for the compiler to start guiding you:
+
+A service:
+```scala
+import com.leobenkel.laeta.Service
+
+case class MyService(override val input: INPUT) extends Service[INPUT, MyService] {
+ ???
+}
+```
+
+And a factory:
+
+```scala
+import com.leobenkel.laeta.ServiceFactory
+
+case class MyFactory(override val getInput: Int) extends ServiceFactory[INPUT, MyService] {
+    lazy override protected val getObject: ServiceConstructor[INPUT, MyService] = MyConstructor
+    lazy override protected val getType:   ServiceType[MyService] = MyGeyKey
+}
+```
+
+This will force you to create:
+
+A constructor:
+
+```scala
+object MyConstructor extends ServiceConstructor[INPUT, MyService]
+```
+
+and a Type:
+
+```scala
+case object MyGeyKey extends ServiceType[MyService] {}
+```
+
+### To use
+
+And to use is very simple, you first register all the factories:
+
+```scala
+val registryBuilder: RegistryFactories = RegistryFactories()
+    .register(MyFactory(input))
+```
+
+and then you seal the registry:
+
+```scala
+val registryReady: ServiceCollection = registryBuilder.create
+```
+
+you can now access any service, anywhere, **typed** !
+
+```scala
+val myService = registryReady.getService(MyGeyKey)
+```
