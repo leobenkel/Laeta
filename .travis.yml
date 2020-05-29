@@ -6,6 +6,8 @@ scala:
 jdk:
   - oraclejdk8
 
+os:
+  - linux
 
 # https://travis-ci.community/t/solved-oraclejdk8-installation-failing-still-again/3428
 dist: trusty
