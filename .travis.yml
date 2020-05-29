@@ -48,7 +48,7 @@ jobs:
 
     - stage: release
       name: release-staging-lib
-      script: sbt 'set isSnapshot := true' "; project library ; +ci-release"
+      script: sbt "; project library ; set isSnapshot := true ; +ci-release"
       if: tag IS NOT present
 
     - stage: release
