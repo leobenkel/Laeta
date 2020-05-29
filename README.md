@@ -50,7 +50,7 @@ With version being: [![maven-central-badge][]][maven-search]
 
 ### Setup
 
-Take a look at the [test example](https://github.com/leobenkel/Laeta/blob/master/Library/src/test/scala/foo/bar/consumer/ServiceTest.scala)
+Live example: [Scastie-0P5GodpCSSmL5Pd8igL0tA](https://scastie.scala-lang.org/0P5GodpCSSmL5Pd8igL0tA) or take a look at the [test example](https://github.com/leobenkel/Laeta/blob/master/Library/src/test/scala/foo/bar/consumer/ServiceTest.scala)
 
 You need two pieces for the compiler to start guiding you:
 
