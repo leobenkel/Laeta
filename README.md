@@ -34,6 +34,7 @@ Small library to handle registery of services.
   * [Add to build.sbt](#add-to-buildsbt)
   * [Setup](#setup)
   * [To use](#to-use)
+  * [Notes](#notes)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
@@ -108,3 +109,13 @@ you can now access any service, anywhere, **typed** !
 ```scala
 val myService = registryReady.getService(MyGeyKey)
 ```
+
+### Notes
+
+It is possible to merge the `ServiceConstructor[INPUT, MyService]` and the `ServiceType[MyService]` for shorter code.
+
+This mean you can replace all the places where we used `MyGeyKey` by `MyConstructor`. 
+
+Also, your `MyConstructor` should probably have the same name as `case class MyFactory` so you don't have to implement the `apply` method.
+
+Example on [Scastie-716dNpMORwuJqO9RWED93A](https://scastie.scala-lang.org/716dNpMORwuJqO9RWED93A).
