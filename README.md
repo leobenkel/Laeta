@@ -83,6 +83,8 @@ A constructor:
 object MyConstructor extends ServiceConstructor[INPUT, MyService]
 ```
 
+Your `MyConstructor` should probably have the same name as `case class MyService` so you don't have to implement the `apply` method.
+
 and a Type:
 
 ```scala
@@ -115,7 +117,5 @@ val myService = registryReady.getService(MyGeyKey)
 It is possible to merge the `ServiceConstructor[INPUT, MyService]` and the `ServiceType[MyService]` for shorter code.
 
 This mean you can replace all the places where we used `MyGeyKey` by `MyConstructor`. 
-
-Also, your `MyConstructor` should probably have the same name as `case class MyFactory` so you don't have to implement the `apply` method.
 
 Example on [Scastie-716dNpMORwuJqO9RWED93A](https://scastie.scala-lang.org/716dNpMORwuJqO9RWED93A).
