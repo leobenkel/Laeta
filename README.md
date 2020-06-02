@@ -24,9 +24,11 @@
 
 # Laeta
 
-[Laeta (wikipedia)](https://en.wikipedia.org/wiki/Laetitia_(goddess))
-
 Small library to handle registery of services.
+
+Handle collection of Services of arbitrary type and retrieve them fully typed.
+
+[Laeta (wikipedia)](https://en.wikipedia.org/wiki/Laetitia_(goddess))
 
 ## Table of Contents
 
