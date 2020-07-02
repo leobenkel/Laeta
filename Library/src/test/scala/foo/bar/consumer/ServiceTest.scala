@@ -1,9 +1,9 @@
 package foo.bar.consumer
 
 import com.leobenkel.laeta._
-import org.scalatest.FreeSpec
+import org.scalatest.freespec.AnyFreeSpec
 
-class ServiceTest extends FreeSpec {
+class ServiceTest extends AnyFreeSpec {
   "Service Example" - {
     "Registering and using services" in {
       val aInput: Int = 456
