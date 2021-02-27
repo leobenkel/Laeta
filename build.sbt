@@ -1,7 +1,7 @@
 val projectName = IO.readLines(new File("PROJECT_NAME")).head
 val v = IO.readLines(new File("VERSION")).head
 
-val scala11 = "2.11.12"
+val scala11 = "2.13.5"
 val scala12 = "2.12.7"
 
 lazy val rootSettings = Seq(
