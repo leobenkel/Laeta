@@ -23,7 +23,7 @@ lazy val rootSettings = Seq(
 
 lazy val commonSettings = rootSettings ++ Seq(
   libraryDependencies ++= Seq(
-    "org.scalatest" %% "scalatest" % "3.2.3" % Test
+    "org.scalatest" %% "scalatest" % "3.2.9" % Test
   ),
   updateOptions           := updateOptions.value.withGigahorse(false),
   publishArtifact in Test := false,
