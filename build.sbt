@@ -26,7 +26,7 @@ lazy val commonSettings = rootSettings ++ Seq(
     "org.scalatest" %% "scalatest" % "3.2.10" % Test
   ),
   updateOptions           := updateOptions.value.withGigahorse(false),
-  publishArtifact in Test := false,
+  (Test / publishArtifact) := false,
   pomIncludeRepository    := (_ => false)
 )
 
