@@ -2,7 +2,7 @@
 [![Gitter](https://badges.gitter.im/laeta/community.svg)](https://gitter.im/laeta/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![release-badge][]][release]
 [![maven-central-badge][]][maven-search]
-[![Build Status](https://travis-ci.com/leobenkel/laeta.svg?branch=master)](https://travis-ci.com/leobenkel/laeta)
+[![CI-CD](https://github.com/leobenkel/Laeta/actions/workflows/ci_cd.yml/badge.svg)](https://github.com/leobenkel/Laeta/actions/workflows/ci_cd.yml)
 [![BCH compliance](https://bettercodehub.com/edge/badge/leobenkel/Laeta?branch=master)](https://bettercodehub.com/)
 [![Coverage Status](https://coveralls.io/repos/github/leobenkel/Laeta/badge.svg?branch=master)](https://coveralls.io/github/leobenkel/laeta?branch=master)
 [![Mutation testing badge](https://badge.stryker-mutator.io/github.com/leobenkel/Laeta/master)](https://stryker-mutator.github.io)
