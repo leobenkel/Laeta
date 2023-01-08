@@ -26,7 +26,7 @@ Test / publishArtifact := false
 
 pomIncludeRepository := (_ => false)
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.14" % Test
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15" % Test
 
 publishArtifact in Test := false
 pomIncludeRepository    := (_ => false)
